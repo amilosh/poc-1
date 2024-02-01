@@ -1,19 +1,19 @@
 package pl.amilosh.poc.service.impl;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import pl.amilosh.poc.dto.UserDto;
 import pl.amilosh.poc.entity.User;
+import pl.amilosh.poc.mapper.UserMapper;
 import pl.amilosh.poc.repository.UserRepository;
 import pl.amilosh.poc.service.UserService;
 
 @Service
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
-
-    public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+    private final UserMapper userMapper;
 
     @Override
     public User getUserById(Integer id) {
@@ -21,8 +21,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public User create(UserDto dto) {
-        User user = new User();
-        user.setName(dto.getName());
+        User user = userMapper.toEntity(dto);
         return userRepository.save(user);
     }
 }
