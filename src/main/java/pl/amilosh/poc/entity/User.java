@@ -1,6 +1,9 @@
 package pl.amilosh.poc.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -13,8 +16,11 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
+@Builder
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class User implements Serializable {
 
     @Id
@@ -22,6 +28,9 @@ public class User implements Serializable {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
 }

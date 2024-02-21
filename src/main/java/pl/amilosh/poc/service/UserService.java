@@ -8,4 +8,6 @@ public interface UserService {
     User getUserById(Integer id);
 
     User create(UserDto dto);
+
+    void fillUsersFromCsv();
 }

@@ -19,6 +19,7 @@ ext {
     mapStructVersion = '1.4.2.Final'
     lombokVersion = '1.18.22'
     lombokMapstructBindingVersion = '0.2.0'
+    openCsvVersion = '5.8'
 }
 
 repositories {
@@ -38,6 +39,7 @@ dependencies {
     implementation "org.mapstruct:mapstruct:$mapStructVersion"
     implementation "org.projectlombok:lombok-mapstruct-binding:$lombokMapstructBindingVersion"
     implementation 'org.flywaydb:flyway-core'
+    implementation "com.opencsv:opencsv:$openCsvVersion"
 
     runtimeOnly 'org.postgresql:postgresql'
 }

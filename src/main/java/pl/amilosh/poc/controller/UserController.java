@@ -39,4 +39,10 @@ public class UserController {
         User user = userService.create(dto);
         return userMapper.toDto(user);
     }
+
+    @PostMapping(value = "/fill-users-from-csv")
+    @ResponseStatus(HttpStatus.OK)
+    public void fillUsersFromCsv() {
+        userService.fillUsersFromCsv();
+    }
 }

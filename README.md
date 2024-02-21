@@ -9,6 +9,9 @@ Proof of concept project
 - FlyWay
 - Dockerfile, docker-compose
 
+## Features
+- Read values from csv file
+
 ## Run
 ### Dockerfile, image, container vie docker-compose
 ```
