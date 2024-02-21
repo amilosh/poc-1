@@ -1,6 +1,5 @@
 package pl.amilosh.poc.entity;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,8 +1,8 @@
 package pl.amilosh.poc.mapper;
 
-import org.springframework.stereotype.Component;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
+import org.springframework.stereotype.Component;
 import pl.amilosh.poc.dto.UserDto;
 import pl.amilosh.poc.entity.User;
 
